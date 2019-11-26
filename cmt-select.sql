@@ -36,7 +36,7 @@ WHERE author.author_id = 'bjy';
 SELECT COUNT(subscribe.category_id)
 FROM subscribe
 LEFT JOIN category ON category.category_id = subscribe.category_id
-WHERE author_id = 'bjy';
+WHERE category.author_id = 'bjy';
 
 -- 다른작가의 최신글 6개 (처음에 카테고리 및 게시글 내용 출력햇을 때 받았던 작가아이디 정보 활용)
 SELECT attachment.path, attachment.file_name, board.title, board.content, board.author_id
